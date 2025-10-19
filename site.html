@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pour Maman</title>
+  <link rel="stylesheet" href="site.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="logo">Pour Maman</h1>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="image.png" alt="Maman et moi" class="hero-image" />
+    <h2>Un petit mot pour toi</h2>
+    <p>Ce site est mon geste d’amour. Je pense à toi chaque jour, et j’espère qu’un jour tu me pardonneras.</p>
+    <button class="btn" onclick="openModal()">Lire mon message</button>
+  </section>
+
+  <section class="quote">
+    <blockquote>
+      “L’amour d’une mère est un jardin où l’on revient toujours.”
+    </blockquote>
+  </section>
+
+  <section class="footer">
+    <p>&copy; 2025 Jenna. Fait avec amour pour Maman.</p>
+  </section>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3>Mon message pour toi</h3>
+      <p>
+        Maman, je suis désolée pour ce qui s’est passé. Je n’ai jamais voulu te blesser. Tu comptes tellement pour moi, et ton silence me fait mal. Je t’aime profondément, et j’espère qu’un jour tu pourras m’ouvrir ton cœur à nouveau.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById("modal").style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById("modal");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+</body>
+</html>
